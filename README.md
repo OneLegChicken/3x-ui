@@ -73,20 +73,10 @@ Built as an enhanced fork of the original X-UI project, 3X-UI adds broader proto
 
 ## Quick Start
 
-```bash
-bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
-```
-
-To install a specific version, append its tag (e.g. `v3.7.0`):
+Install the OneLegChicken 3X-UI test prerelease on a Linux VPS from Bash:
 
 ```bash
-bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh) v3.7.0
-```
-
-To install the rolling **dev** build (latest per-commit pre-release from `main`, not a stable release), pass `dev-latest`:
-
-```bash
-bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh) dev-latest
+sudo bash -c 'bash <(curl -fsSL https://raw.githubusercontent.com/OneLegChicken/3x-ui/v3.11.0-onelegchicken-test.1/install.sh | sed -E "s/[Mm][Hh][Ss]anaei\/3x-ui/OneLegChicken\/3x-ui/g") v3.11.0-onelegchicken-test.1'
 ```
 
 During installation a random username, password, and access path are generated. After installation, run `x-ui` to open the management menu, where you can start/stop the service, view or reset your login credentials, manage SSL certificates, and more.

@@ -195,6 +195,12 @@ jobs:
           file: x-ui-linux-${{ matrix.platform }}.tar.gz*
           file_glob: true
           overwrite: true
+          release_name: OneLegChicken 3X-UI ${{ github.ref_name }}
+          body: |
+            OneLegChicken 3X-UI test prerelease for Linux VPS.
+            Install on a Linux VPS from Bash (run as root):
+            sudo bash -c 'bash <(curl -fsSL https://raw.githubusercontent.com/OneLegChicken/3x-ui/${{ github.ref_name }}/install.sh | sed -E "s/[Mm][Hh][Ss]anaei\/3x-ui/OneLegChicken\/3x-ui/g") ${{ github.ref_name }}'
+            The installer verifies the published SHA-256 checksum.
           prerelease: true
 
   # =================================
@@ -336,6 +342,12 @@ jobs:
           file: x-ui-windows-amd64.zip*
           file_glob: true
           overwrite: true
+          release_name: OneLegChicken 3X-UI ${{ github.ref_name }}
+          body: |
+            OneLegChicken 3X-UI test prerelease for Linux VPS.
+            Install on a Linux VPS from Bash (run as root):
+            sudo bash -c 'bash <(curl -fsSL https://raw.githubusercontent.com/OneLegChicken/3x-ui/${{ github.ref_name }}/install.sh | sed -E "s/[Mm][Hh][Ss]anaei\/3x-ui/OneLegChicken\/3x-ui/g") ${{ github.ref_name }}'
+            The installer verifies the published SHA-256 checksum.
           prerelease: true
 
   # =================================
